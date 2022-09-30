@@ -1,0 +1,3 @@
+D:/sockets/client/build/CMakeFiles/client.dir
+D:/sockets/client/build/CMakeFiles/edit_cache.dir
+D:/sockets/client/build/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,2 @@
+D:\CodeBlocks\mingw64\bin\ar.exe qc libmainModule.a CMakeFiles/mainModule.dir/main.cpp.obj
+D:\CodeBlocks\mingw64\bin\ranlib.exe libmainModule.a

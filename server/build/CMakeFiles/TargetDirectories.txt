@@ -1,0 +1,3 @@
+D:/sockets/server/build/CMakeFiles/server.dir
+D:/sockets/server/build/CMakeFiles/edit_cache.dir
+D:/sockets/server/build/CMakeFiles/rebuild_cache.dir
