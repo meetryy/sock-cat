@@ -1,47 +1,47 @@
 [
 {
   "directory": "D:/sockets/server/build",
-  "command": "D:\\CodeBlocks\\mingw64\\bin\\g++.exe  @CMakeFiles/server.dir/includes_CXX.rsp  -std=c++11 -g -o CMakeFiles\\server.dir\\src\\main.cpp.obj -c D:\\sockets\\server\\src\\main.cpp",
+  "command": "D:\\CodeBlocks\\mingw64\\bin\\g++.exe -D_WIN32_WINNT=0x0A00 @CMakeFiles/server.dir/includes_CXX.rsp  -std=c++11 -g -o CMakeFiles\\server.dir\\src\\main.cpp.obj -c D:\\sockets\\server\\src\\main.cpp",
   "file": "D:/sockets/server/src/main.cpp"
 },
 {
   "directory": "D:/sockets/server/build",
-  "command": "D:\\CodeBlocks\\mingw64\\bin\\g++.exe  @CMakeFiles/server.dir/includes_CXX.rsp  -std=c++11 -g -o CMakeFiles\\server.dir\\src\\db.cpp.obj -c D:\\sockets\\server\\src\\db.cpp",
+  "command": "D:\\CodeBlocks\\mingw64\\bin\\g++.exe -D_WIN32_WINNT=0x0A00 @CMakeFiles/server.dir/includes_CXX.rsp  -std=c++11 -g -o CMakeFiles\\server.dir\\src\\db.cpp.obj -c D:\\sockets\\server\\src\\db.cpp",
   "file": "D:/sockets/server/src/db.cpp"
 },
 {
   "directory": "D:/sockets/server/build",
-  "command": "D:\\CodeBlocks\\mingw64\\bin\\g++.exe  @CMakeFiles/server.dir/includes_CXX.rsp  -std=c++11 -g -o CMakeFiles\\server.dir\\src\\gui.cpp.obj -c D:\\sockets\\server\\src\\gui.cpp",
+  "command": "D:\\CodeBlocks\\mingw64\\bin\\g++.exe -D_WIN32_WINNT=0x0A00 @CMakeFiles/server.dir/includes_CXX.rsp  -std=c++11 -g -o CMakeFiles\\server.dir\\src\\gui.cpp.obj -c D:\\sockets\\server\\src\\gui.cpp",
   "file": "D:/sockets/server/src/gui.cpp"
 },
 {
   "directory": "D:/sockets/server/build",
-  "command": "D:\\CodeBlocks\\mingw64\\bin\\gcc.exe  @CMakeFiles/server.dir/includes_C.rsp -g -o CMakeFiles\\server.dir\\sqlite3\\sqlite3.c.obj -c D:\\sockets\\server\\sqlite3\\sqlite3.c",
+  "command": "D:\\CodeBlocks\\mingw64\\bin\\gcc.exe -D_WIN32_WINNT=0x0A00 @CMakeFiles/server.dir/includes_C.rsp -g -o CMakeFiles\\server.dir\\sqlite3\\sqlite3.c.obj -c D:\\sockets\\server\\sqlite3\\sqlite3.c",
   "file": "D:/sockets/server/sqlite3/sqlite3.c"
 },
 {
   "directory": "D:/sockets/server/build",
-  "command": "D:\\CodeBlocks\\mingw64\\bin\\g++.exe  @CMakeFiles/server.dir/includes_CXX.rsp  -std=c++11 -g -o CMakeFiles\\server.dir\\D_\\sockets\\common\\src\\packet.cpp.obj -c D:\\sockets\\common\\src\\packet.cpp",
+  "command": "D:\\CodeBlocks\\mingw64\\bin\\g++.exe -D_WIN32_WINNT=0x0A00 @CMakeFiles/server.dir/includes_CXX.rsp  -std=c++11 -g -o CMakeFiles\\server.dir\\D_\\sockets\\common\\src\\packet.cpp.obj -c D:\\sockets\\common\\src\\packet.cpp",
   "file": "D:/sockets/common/src/packet.cpp"
 },
 {
   "directory": "D:/sockets/server/build",
-  "command": "D:\\CodeBlocks\\mingw64\\bin\\g++.exe  @CMakeFiles/server.dir/includes_CXX.rsp  -std=c++11 -g -o CMakeFiles\\server.dir\\D_\\sockets\\common\\src\\log.cpp.obj -c D:\\sockets\\common\\src\\log.cpp",
+  "command": "D:\\CodeBlocks\\mingw64\\bin\\g++.exe -D_WIN32_WINNT=0x0A00 @CMakeFiles/server.dir/includes_CXX.rsp  -std=c++11 -g -o CMakeFiles\\server.dir\\D_\\sockets\\common\\src\\log.cpp.obj -c D:\\sockets\\common\\src\\log.cpp",
   "file": "D:/sockets/common/src/log.cpp"
 },
 {
   "directory": "D:/sockets/server/build",
-  "command": "D:\\CodeBlocks\\mingw64\\bin\\g++.exe  @CMakeFiles/server.dir/includes_CXX.rsp  -std=c++11 -g -o CMakeFiles\\server.dir\\D_\\sockets\\common\\src\\uuid.cpp.obj -c D:\\sockets\\common\\src\\uuid.cpp",
+  "command": "D:\\CodeBlocks\\mingw64\\bin\\g++.exe -D_WIN32_WINNT=0x0A00 @CMakeFiles/server.dir/includes_CXX.rsp  -std=c++11 -g -o CMakeFiles\\server.dir\\D_\\sockets\\common\\src\\uuid.cpp.obj -c D:\\sockets\\common\\src\\uuid.cpp",
   "file": "D:/sockets/common/src/uuid.cpp"
 },
 {
   "directory": "D:/sockets/server/build",
-  "command": "D:\\CodeBlocks\\mingw64\\bin\\g++.exe  @CMakeFiles/server.dir/includes_CXX.rsp  -std=c++11 -g -o CMakeFiles\\server.dir\\D_\\sockets\\common\\src\\socket.cpp.obj -c D:\\sockets\\common\\src\\socket.cpp",
+  "command": "D:\\CodeBlocks\\mingw64\\bin\\g++.exe -D_WIN32_WINNT=0x0A00 @CMakeFiles/server.dir/includes_CXX.rsp  -std=c++11 -g -o CMakeFiles\\server.dir\\D_\\sockets\\common\\src\\socket.cpp.obj -c D:\\sockets\\common\\src\\socket.cpp",
   "file": "D:/sockets/common/src/socket.cpp"
 },
 {
   "directory": "D:/sockets/server/build",
-  "command": "D:\\CodeBlocks\\mingw64\\bin\\g++.exe  @CMakeFiles/server.dir/includes_CXX.rsp  -std=c++11 -g -o CMakeFiles\\server.dir\\D_\\sockets\\common\\src\\sckcomm.cpp.obj -c D:\\sockets\\common\\src\\sckcomm.cpp",
+  "command": "D:\\CodeBlocks\\mingw64\\bin\\g++.exe -D_WIN32_WINNT=0x0A00 @CMakeFiles/server.dir/includes_CXX.rsp  -std=c++11 -g -o CMakeFiles\\server.dir\\D_\\sockets\\common\\src\\sckcomm.cpp.obj -c D:\\sockets\\common\\src\\sckcomm.cpp",
   "file": "D:/sockets/common/src/sckcomm.cpp"
 }
 ]

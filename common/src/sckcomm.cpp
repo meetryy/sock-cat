@@ -12,13 +12,16 @@
 #include "../../common/inc/socket.hpp"
 #include "../../common/inc/sckcomm.hpp"
 #include "../../common/inc/debug.hpp"
+#include "../../common/inc/time.hpp"
 
 //std::vector<std::thread> myThreads;
 
 Transceiver::Transceiver(const std::string& addr, const std::string& port){
+    Init();
     thisAddress = addr;
     thisPort = port;
-
+    
+    
     ////textLog.GetInstance().Add(0, "%s: created transceiver %s %s", __FUNCTION__, thisAddress, thisPort);
     // TODO: add validation!
 };
@@ -28,6 +31,7 @@ int Transceiver::Init(void){
     sckSystem.Startup();
     if (!sckSystem.isOk())
         return -1;
+    //pkt.sessionId = uuid::generate();
     state = trState::Initialized;
     ////textLog.GetInstance().Add(0, "%s: trx init ok", __FUNCTION__);
     ////textLog.GetInstance().Add(0, "%s: starting tpool threads...", __FUNCTION__);
@@ -137,15 +141,17 @@ int Transceiver::clientTask(void){
                 Packet a;
                 std::string u = uuid::generate();
                 ////textLog.GetInstance().Add(0, "%s: sending msg %s", __FUNCTION__, u.c_str());
-                a.addProperty("type", pktType::status);
-                a.addProperty("content", "msgID", u);
-                a.addProperty("content", "clientInfo", "clientID", 0);
-                a.addProperty("content", "sessionInfo", "sessionID", randomNum);
-                a.updString();
+                
+                //a.addProperty("type", pktType::status);
+                a.addProperty("msgID", u);
+                //a.addProperty("content", "clientInfo", "clientID", 0);
+               // a.addProperty("content", "sessionInfo", "sessionID", randomNum);
+                //a.updString();
+                //
                 std::string A = a.getString();
                 sender.Write(A);
-
-                std::this_thread::sleep_for(std::chrono::milliseconds(1000));
+                std::cout << A << std::endl;
+                std::this_thread::sleep_for(std::chrono::milliseconds(2000));
                 //tPool.QueueJob([this, &listener] {this->separateClientWorker(listener);});
                // separateClientWorker(listener);
 
@@ -182,7 +188,7 @@ int Transceiver::serverTask(void){
                 //textLog.GetInstance().Add(0, "%s: listener is readable. reading...", __FUNCTION__);
                 state = trState::PassingRead;
                 
-                //std::cout << "AAAAAA!" << std::endl;
+                std::cout << "creating separateClientWorker" << std::endl;
 
                 tPool.QueueJob([this, &listener] {this->separateClientWorker(listener);});
 
@@ -215,40 +221,66 @@ int Transceiver::separateClientWorker(Socket &listenerSocket){
     //if (thisClientConn.setBlocking(false) != 0)
     //     std::cout << "can't set blocking" <<std::endl;
 
-    if (thisClientConn.isConnected()){
-        std::cout << "connected" <<std::endl;
+    while (thisClientConn.isConnected()){
+        //std::cout << "connected" <<std::endl;
         if (thisClientConn.isReadable(true)){
             std::string a = thisClientConn.ReceiveString();
-            //std::cout << a << std::endl;
-            pkt.AddCandidate(a);
+            std::vector<Packet> packets = pkt.parseStringToPackets(a);
+            for (auto newPacket : packets){           
+                std::cout << newPacket.getString() <<std::endl;
+            }
+            //Packet newPacket(a);
+            //
+            //if (pkt.AddCandidatePacket(pktDirection::Rx, newPacket))
+            //    pkt.ConstructPacketString(pktType::MessageInResponse, "", newPacket);
         }   
         
+        /*
         std::string ok = "OK!";
         if (thisClientConn.isWriteable(false)){
             thisClientConn.Write(ok);
         }
+        */
     }
+
 
     thisClientConn.Close();
 }
 
+
+std::vector<Packet> Transceiver::pktProcessor::parseStringToPackets(std::string& inputStr){
+    std::stringstream ss;
+    ss << inputStr; 
+    std::vector<Packet> toReturn;
+    while ((!ss.eof()) && (inputStr != "")) {
+        json jmsg;
+        ss >> jmsg;
+        //std::cout << jmsg << std::endl;
+        std::string jStr = jmsg.dump();
+        Packet newPacket(jStr);
+        toReturn.push_back(newPacket);
+        size_t start_position_to_erase = inputStr.find(jStr);
+        inputStr.erase(start_position_to_erase, jStr.length());
+    }
+    return toReturn;
+}
+
+
 void Transceiver::pktProcessor::Worker(void){
     ////textLog.GetInstance().Add(0, "%s: starting packetWorker", __FUNCTION__);
     while (1) {
-        while (packetQ.empty() == false){
+        while (rxPacketQ.empty() == false){
             Packet a;
-            packetQ.dequeue(a);
+            rxPacketQ.dequeue(a);
             Process(a);
-            
         }
         std::this_thread::sleep_for(std::chrono::milliseconds(100));
     }
 }
 
-
-
 int Transceiver::pktProcessor::Process(Packet p){
     switch(static_cast<pktType>(p.j["type"])){
+        /*
         case pktType::message: {
             std::cout << "msg in!" << p.j["someRandomShit"] << std::endl;
             break;
@@ -256,13 +288,14 @@ int Transceiver::pktProcessor::Process(Packet p){
         case pktType::status: {
             std::cout << "status in:" << std::endl;
             std::cout << std::setw(4) << p.j.dump() << std::endl;
-            /*
+         
             std::cout << "message ID: " << p.j["content"]["msgID"] << std::endl;
             std::cout << "client ID: " << p.j["content"]["clientInfo"]["clientID"] << std::endl;
             std::cout << "session ID: " << p.j["content"]["sessionInfo"]["sessionID"] << std::endl;
-            */
+         
             break;
         }
+        */
         case pktType::trash: {
             std::cout << "trash in!" << p.j["someRandomShit"] << std::endl;
             break;
@@ -272,19 +305,66 @@ int Transceiver::pktProcessor::Process(Packet p){
     return 0;
 }
 
-int Transceiver::pktProcessor::AddCandidate(std::string str){
+int Transceiver::pktProcessor::AddCandidateFromString(pktDirection type, std::string str){
     Packet packCand(str);
     if (packCand.isOk() == false)
         return -1;
 
-    packetQ.enqueue(packCand);
+    if (type == pktDirection::Rx)
+        rxPacketQ.enqueue(packCand);
+    else if (type == pktDirection::Tx)
+        txPacketQ.enqueue(packCand);
+    return 0;
 }
 
-int Transceiver::pktProcessor::AddDirectly(Packet p){
-    if (p.isOk() == false)
-        return -1;
-
-    packetQ.enqueue(p);
+int Transceiver::pktProcessor::AddCandidatePacket(pktDirection type, Packet p){
+    if (type == pktDirection::Rx)
+        rxPacketQ.enqueue(p);
+    else if (type == pktDirection::Tx)
+        txPacketQ.enqueue(p);
 }
 
+Transceiver::pktProcessor::pktProcessor(){
+    sessionId = uuid::generate();
+}
 
+std::string Transceiver::pktProcessor::getSessionId(void){
+    return sessionId;
+};
+
+template<typename T>
+std::string Transceiver::pktProcessor::ConstructPacketString(pktType type, T payload, Packet& p){
+    Packet newPacket;
+    newPacket.addProperty("sessionId", sessionId);
+    newPacket.addProperty("msgId", uuid::generate());
+    newPacket.addProperty("time", epochTime::ms());
+    
+    // ClientStatus, MessageOut, MessageInResponse, trash
+    switch (type){
+        case pktType::ServerStatus:{
+            
+            break;
+        }
+        case pktType::ClientStatus:{
+            
+            break;
+        }
+        case pktType::MessageOut:{
+            newPacket.addProperty("msgText", payload);
+            break;
+        }
+        case pktType::MessageInResponse:{
+            newPacket.addProperty("responseToId", p.j["msgId"]);
+            newPacket.addProperty("responseResult", payload);
+            break;
+        }
+        case pktType::trash:{
+            newPacket.addProperty("someTrash", static_cast<int>(rand() % 100));
+            break;
+        }
+        default: break;
+    }
+
+    newPacket.updString();
+    return (newPacket.getString());
+}

@@ -355,8 +355,10 @@ int Socket::isWriteable(bool block){
     FD_ZERO(&WiteSet);
     FD_SET(socketObj, &WiteSet);
 
-    if (block)
+    if (block){
         select(0, NULL, &WiteSet,  NULL, NULL);
+        std::cout << "ready to write" << std::endl;
+    }   
     else {
         struct timeval tv;
         tv.tv_usec = 1;
@@ -368,6 +370,8 @@ int Socket::isWriteable(bool block){
     
     if (FD_ISSET(socketObj, &WiteSet)) 
         result = 1;
+
+    std::cout << "isWriteable = " << (int)result << std::endl;
 
     return (int)result;
 }
@@ -388,18 +392,24 @@ int Socket::ReceiveUntilClosed(void){
 
 std::string Socket::ReceiveString(void){
     DWORD result;
+    std::cout << "trying to read" <<std::endl;
 
     memset(recvbuf, 0, recvbuflen);
-    do {
+    result = recv(socketObj, recvbuf, recvbuflen, MSG_PEEK);
+    std::cout << "peek length is " << result <<std::endl;
+    if (result > 0){
+        std::cout << "receiving " << result << "bytes..." <<std::endl;
         result = recv(socketObj, recvbuf, recvbuflen, 0);
-        if (result > 0)
-            printf("Bytes received: %d\n", result);
-        //else if ( result == 0 )
-        //   printf("Connection closed\n");
-        //if ( result >= 0 )
-        //printf("recv failed with error: %d\n", WSAGetLastError());
+    }
 
-    } while (result > 0);
+    if (result > 0)
+        printf("Bytes received: %d\n", result);
+    else if ( result == 0 )
+        printf("Connection closed\n");
+    else
+    printf("recv failed with error: %d\n", WSAGetLastError());
+
+    //} while (result > 0);
     /*
     if ( result == 0 )
         printf("Connection closed\n");

@@ -5,10 +5,8 @@
 
 using json = nlohmann::json;
 
-enum class pktType {status, message, trash};
-class Packet{
+class Packet {
         bool ok;
-        pktType type;
 
     public:
         Packet();

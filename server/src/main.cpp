@@ -7,11 +7,14 @@
 #include <stdio.h>
 
 #include <iostream>
+#include <sstream>
+#include <vector>
 
 #include "../../common/inc/socket.hpp"
 #include "../../common/inc/sckcomm.hpp"
 #include "../inc/db.hpp"
 #include "../inc/log.hpp"
+#include "../../common/inc/json.hpp"
 
 void test(void){
     std::cout << "SSSSSSSSSSSS" <<std::endl;
@@ -19,6 +22,7 @@ void test(void){
 
 int __cdecl main(void) 
 {           
+    
 
     Log textLog;
     textLog.GetInstance().Add(0, "MAIN: hello! this is a test!");
@@ -27,9 +31,7 @@ int __cdecl main(void)
     DB db;
     db.test();
 
-
     Transceiver tr("127.0.0.1", "27015");
-    tr.Init();
 
     tr.setRole(Role::Server);
     //tr.setGenericTask(test);
@@ -37,6 +39,7 @@ int __cdecl main(void)
     tr.playRole();
     
     //tr.joinThreads();
+
 
     return 0;
 }

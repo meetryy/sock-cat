@@ -422,4 +422,5 @@ CMakeFiles/client.dir/D_/sockets/common/src/sckcomm.cpp.obj: \
  D:/CodeBlocks/mingw64/x86_64-w64-mingw32/include/c++/fstream \
  D:/CodeBlocks/mingw64/x86_64-w64-mingw32/include/c++/x86_64-w64-mingw32/bits/basic_file.h \
  D:/CodeBlocks/mingw64/x86_64-w64-mingw32/include/c++/x86_64-w64-mingw32/bits/c++io.h \
- D:/CodeBlocks/mingw64/x86_64-w64-mingw32/include/c++/bits/fstream.tcc
+ D:/CodeBlocks/mingw64/x86_64-w64-mingw32/include/c++/bits/fstream.tcc \
+ D:/sockets/common/inc/time.hpp

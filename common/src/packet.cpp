@@ -6,6 +6,9 @@
 #include <chrono>
 #include <thread>
 #include <cstdlib>
+#include <vector>
+#include <sstream>
+#include <iostream>
 
 #include "../inc/json.hpp"
 #include "../inc/packet.hpp"

@@ -1,32 +1,32 @@
 [
 {
   "directory": "D:/sockets/client/build",
-  "command": "D:\\CodeBlocks\\mingw64\\bin\\g++.exe  @CMakeFiles/client.dir/includes_CXX.rsp  -std=c++11 -g -o CMakeFiles\\client.dir\\main.cpp.obj -c D:\\sockets\\client\\main.cpp",
+  "command": "D:\\CodeBlocks\\mingw64\\bin\\g++.exe -D_WIN32_WINNT=0x0A00 @CMakeFiles/client.dir/includes_CXX.rsp  -std=c++11 -g -o CMakeFiles\\client.dir\\main.cpp.obj -c D:\\sockets\\client\\main.cpp",
   "file": "D:/sockets/client/main.cpp"
 },
 {
   "directory": "D:/sockets/client/build",
-  "command": "D:\\CodeBlocks\\mingw64\\bin\\g++.exe  @CMakeFiles/client.dir/includes_CXX.rsp  -std=c++11 -g -o CMakeFiles\\client.dir\\D_\\sockets\\common\\src\\packet.cpp.obj -c D:\\sockets\\common\\src\\packet.cpp",
+  "command": "D:\\CodeBlocks\\mingw64\\bin\\g++.exe -D_WIN32_WINNT=0x0A00 @CMakeFiles/client.dir/includes_CXX.rsp  -std=c++11 -g -o CMakeFiles\\client.dir\\D_\\sockets\\common\\src\\packet.cpp.obj -c D:\\sockets\\common\\src\\packet.cpp",
   "file": "D:/sockets/common/src/packet.cpp"
 },
 {
   "directory": "D:/sockets/client/build",
-  "command": "D:\\CodeBlocks\\mingw64\\bin\\g++.exe  @CMakeFiles/client.dir/includes_CXX.rsp  -std=c++11 -g -o CMakeFiles\\client.dir\\D_\\sockets\\common\\src\\uuid.cpp.obj -c D:\\sockets\\common\\src\\uuid.cpp",
+  "command": "D:\\CodeBlocks\\mingw64\\bin\\g++.exe -D_WIN32_WINNT=0x0A00 @CMakeFiles/client.dir/includes_CXX.rsp  -std=c++11 -g -o CMakeFiles\\client.dir\\D_\\sockets\\common\\src\\uuid.cpp.obj -c D:\\sockets\\common\\src\\uuid.cpp",
   "file": "D:/sockets/common/src/uuid.cpp"
 },
 {
   "directory": "D:/sockets/client/build",
-  "command": "D:\\CodeBlocks\\mingw64\\bin\\g++.exe  @CMakeFiles/client.dir/includes_CXX.rsp  -std=c++11 -g -o CMakeFiles\\client.dir\\D_\\sockets\\common\\src\\socket.cpp.obj -c D:\\sockets\\common\\src\\socket.cpp",
+  "command": "D:\\CodeBlocks\\mingw64\\bin\\g++.exe -D_WIN32_WINNT=0x0A00 @CMakeFiles/client.dir/includes_CXX.rsp  -std=c++11 -g -o CMakeFiles\\client.dir\\D_\\sockets\\common\\src\\socket.cpp.obj -c D:\\sockets\\common\\src\\socket.cpp",
   "file": "D:/sockets/common/src/socket.cpp"
 },
 {
   "directory": "D:/sockets/client/build",
-  "command": "D:\\CodeBlocks\\mingw64\\bin\\g++.exe  @CMakeFiles/client.dir/includes_CXX.rsp  -std=c++11 -g -o CMakeFiles\\client.dir\\D_\\sockets\\common\\src\\sckcomm.cpp.obj -c D:\\sockets\\common\\src\\sckcomm.cpp",
+  "command": "D:\\CodeBlocks\\mingw64\\bin\\g++.exe -D_WIN32_WINNT=0x0A00 @CMakeFiles/client.dir/includes_CXX.rsp  -std=c++11 -g -o CMakeFiles\\client.dir\\D_\\sockets\\common\\src\\sckcomm.cpp.obj -c D:\\sockets\\common\\src\\sckcomm.cpp",
   "file": "D:/sockets/common/src/sckcomm.cpp"
 },
 {
   "directory": "D:/sockets/client/build",
-  "command": "D:\\CodeBlocks\\mingw64\\bin\\g++.exe  @CMakeFiles/client.dir/includes_CXX.rsp  -std=c++11 -g -o CMakeFiles\\client.dir\\D_\\sockets\\common\\src\\log.cpp.obj -c D:\\sockets\\common\\src\\log.cpp",
+  "command": "D:\\CodeBlocks\\mingw64\\bin\\g++.exe -D_WIN32_WINNT=0x0A00 @CMakeFiles/client.dir/includes_CXX.rsp  -std=c++11 -g -o CMakeFiles\\client.dir\\D_\\sockets\\common\\src\\log.cpp.obj -c D:\\sockets\\common\\src\\log.cpp",
   "file": "D:/sockets/common/src/log.cpp"
 }
 ]

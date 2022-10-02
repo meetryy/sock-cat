@@ -23,20 +23,20 @@
 using json = nlohmann::json;
 
 int __cdecl main(int argc, char **argv) { 
-    /*
+    
     Log textLog;
-    textLog.GetInstance().Add(0, "%s %s: start!", __FUNCTION__);
-    textLog.GetInstance().setOut(0, 1);
+    //textLog.GetInstance().Add(0, "%s %s: start!", __FUNCTION__);
+    //textLog.GetInstance().setOut(0, 1);
 
     Transceiver tr("127.0.0.1", "27015");
-    tr.Init();
+    
 
     tr.setRole(Role::Client);
     tr.playRole();
-    */
-
-
     
+
+
+    /*
     WSADATA wsaData;
     SOCKET ConnectSocket = INVALID_SOCKET;
     struct addrinfo *result = NULL,
@@ -165,5 +165,8 @@ int __cdecl main(int argc, char **argv) {
 
     freeaddrinfo(result);
     WSACleanup();
+
+    */
+
     return 0;
 }

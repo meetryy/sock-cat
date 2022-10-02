@@ -3,13 +3,13 @@
 
 # compile C with D:/CodeBlocks/mingw64/bin/gcc.exe
 # compile CXX with D:/CodeBlocks/mingw64/bin/g++.exe
-C_DEFINES = 
+C_DEFINES = -D_WIN32_WINNT=0x0A00
 
 C_INCLUDES = @CMakeFiles/server.dir/includes_C.rsp
 
 C_FLAGS = -g
 
-CXX_DEFINES = 
+CXX_DEFINES = -D_WIN32_WINNT=0x0A00
 
 CXX_INCLUDES = @CMakeFiles/server.dir/includes_CXX.rsp
 

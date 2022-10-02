@@ -513,26 +513,12 @@ CMakeFiles/server.dir/D_/sockets/common/src/packet.cpp.obj: D:/sockets/common/sr
   D:/CodeBlocks/mingw64/x86_64-w64-mingw32/include/c++/bits/shared_ptr_atomic.h \
   D:/CodeBlocks/mingw64/x86_64-w64-mingw32/include/c++/bits/atomic_base.h \
   D:/CodeBlocks/mingw64/x86_64-w64-mingw32/include/c++/backward/auto_ptr.h \
-  D:/sockets/common/inc/json.hpp \
-  D:/CodeBlocks/mingw64/x86_64-w64-mingw32/include/c++/algorithm \
-  D:/CodeBlocks/mingw64/x86_64-w64-mingw32/include/c++/bits/stl_algo.h \
-  D:/CodeBlocks/mingw64/x86_64-w64-mingw32/include/c++/bits/algorithmfwd.h \
-  D:/CodeBlocks/mingw64/x86_64-w64-mingw32/include/c++/bits/stl_heap.h \
-  D:/CodeBlocks/mingw64/x86_64-w64-mingw32/include/c++/random \
-  D:/CodeBlocks/mingw64/x86_64-w64-mingw32/include/c++/cmath \
-  D:/CodeBlocks/mingw64/x86_64-w64-mingw32/include/math.h \
-  D:/CodeBlocks/mingw64/x86_64-w64-mingw32/include/c++/bits/random.h \
   D:/CodeBlocks/mingw64/x86_64-w64-mingw32/include/c++/vector \
   D:/CodeBlocks/mingw64/x86_64-w64-mingw32/include/c++/bits/stl_vector.h \
   D:/CodeBlocks/mingw64/x86_64-w64-mingw32/include/c++/bits/stl_bvector.h \
   D:/CodeBlocks/mingw64/x86_64-w64-mingw32/include/c++/bits/vector.tcc \
-  D:/CodeBlocks/mingw64/x86_64-w64-mingw32/include/c++/x86_64-w64-mingw32/bits/opt_random.h \
-  D:/CodeBlocks/mingw64/x86_64-w64-mingw32/include/c++/bits/random.tcc \
-  D:/CodeBlocks/mingw64/x86_64-w64-mingw32/include/c++/numeric \
-  D:/CodeBlocks/mingw64/x86_64-w64-mingw32/include/c++/bits/stl_numeric.h \
-  D:/CodeBlocks/mingw64/x86_64-w64-mingw32/include/c++/cstddef \
-  D:/CodeBlocks/mingw64/x86_64-w64-mingw32/include/c++/iterator \
-  D:/CodeBlocks/mingw64/x86_64-w64-mingw32/include/c++/ostream \
+  D:/CodeBlocks/mingw64/x86_64-w64-mingw32/include/c++/sstream \
+  D:/CodeBlocks/mingw64/x86_64-w64-mingw32/include/c++/istream \
   D:/CodeBlocks/mingw64/x86_64-w64-mingw32/include/c++/ios \
   D:/CodeBlocks/mingw64/x86_64-w64-mingw32/include/c++/bits/ios_base.h \
   D:/CodeBlocks/mingw64/x86_64-w64-mingw32/include/c++/bits/locale_classes.h \
@@ -550,9 +536,26 @@ CMakeFiles/server.dir/D_/sockets/common/src/packet.cpp.obj: D:/sockets/common/sr
   D:/CodeBlocks/mingw64/x86_64-w64-mingw32/include/c++/x86_64-w64-mingw32/bits/ctype_inline.h \
   D:/CodeBlocks/mingw64/x86_64-w64-mingw32/include/c++/bits/locale_facets.tcc \
   D:/CodeBlocks/mingw64/x86_64-w64-mingw32/include/c++/bits/basic_ios.tcc \
+  D:/CodeBlocks/mingw64/x86_64-w64-mingw32/include/c++/ostream \
   D:/CodeBlocks/mingw64/x86_64-w64-mingw32/include/c++/bits/ostream.tcc \
-  D:/CodeBlocks/mingw64/x86_64-w64-mingw32/include/c++/istream \
   D:/CodeBlocks/mingw64/x86_64-w64-mingw32/include/c++/bits/istream.tcc \
+  D:/CodeBlocks/mingw64/x86_64-w64-mingw32/include/c++/bits/sstream.tcc \
+  D:/CodeBlocks/mingw64/x86_64-w64-mingw32/include/c++/iostream \
+  D:/sockets/common/inc/json.hpp \
+  D:/CodeBlocks/mingw64/x86_64-w64-mingw32/include/c++/algorithm \
+  D:/CodeBlocks/mingw64/x86_64-w64-mingw32/include/c++/bits/stl_algo.h \
+  D:/CodeBlocks/mingw64/x86_64-w64-mingw32/include/c++/bits/algorithmfwd.h \
+  D:/CodeBlocks/mingw64/x86_64-w64-mingw32/include/c++/bits/stl_heap.h \
+  D:/CodeBlocks/mingw64/x86_64-w64-mingw32/include/c++/random \
+  D:/CodeBlocks/mingw64/x86_64-w64-mingw32/include/c++/cmath \
+  D:/CodeBlocks/mingw64/x86_64-w64-mingw32/include/math.h \
+  D:/CodeBlocks/mingw64/x86_64-w64-mingw32/include/c++/bits/random.h \
+  D:/CodeBlocks/mingw64/x86_64-w64-mingw32/include/c++/x86_64-w64-mingw32/bits/opt_random.h \
+  D:/CodeBlocks/mingw64/x86_64-w64-mingw32/include/c++/bits/random.tcc \
+  D:/CodeBlocks/mingw64/x86_64-w64-mingw32/include/c++/numeric \
+  D:/CodeBlocks/mingw64/x86_64-w64-mingw32/include/c++/bits/stl_numeric.h \
+  D:/CodeBlocks/mingw64/x86_64-w64-mingw32/include/c++/cstddef \
+  D:/CodeBlocks/mingw64/x86_64-w64-mingw32/include/c++/iterator \
   D:/CodeBlocks/mingw64/x86_64-w64-mingw32/include/c++/bits/stream_iterator.h \
   D:/CodeBlocks/mingw64/x86_64-w64-mingw32/include/c++/forward_list \
   D:/CodeBlocks/mingw64/x86_64-w64-mingw32/include/c++/bits/forward_list.h \
@@ -1019,7 +1022,8 @@ CMakeFiles/server.dir/D_/sockets/common/src/sckcomm.cpp.obj: D:/sockets/common/s
   D:/CodeBlocks/mingw64/x86_64-w64-mingw32/include/c++/fstream \
   D:/CodeBlocks/mingw64/x86_64-w64-mingw32/include/c++/x86_64-w64-mingw32/bits/basic_file.h \
   D:/CodeBlocks/mingw64/x86_64-w64-mingw32/include/c++/x86_64-w64-mingw32/bits/c++io.h \
-  D:/CodeBlocks/mingw64/x86_64-w64-mingw32/include/c++/bits/fstream.tcc
+  D:/CodeBlocks/mingw64/x86_64-w64-mingw32/include/c++/bits/fstream.tcc \
+  D:/sockets/common/inc/time.hpp
 
 CMakeFiles/server.dir/D_/sockets/common/src/socket.cpp.obj: D:/sockets/common/src/socket.cpp \
   D:/CodeBlocks/mingw64/x86_64-w64-mingw32/include/winsock2.h \
@@ -2735,6 +2739,14 @@ CMakeFiles/server.dir/src/main.cpp.obj: D:/sockets/server/src/main.cpp \
   D:/CodeBlocks/mingw64/x86_64-w64-mingw32/include/c++/bits/ostream.tcc \
   D:/CodeBlocks/mingw64/x86_64-w64-mingw32/include/c++/istream \
   D:/CodeBlocks/mingw64/x86_64-w64-mingw32/include/c++/bits/istream.tcc \
+  D:/CodeBlocks/mingw64/x86_64-w64-mingw32/include/c++/sstream \
+  D:/CodeBlocks/mingw64/x86_64-w64-mingw32/include/c++/bits/sstream.tcc \
+  D:/CodeBlocks/mingw64/x86_64-w64-mingw32/include/c++/vector \
+  D:/CodeBlocks/mingw64/x86_64-w64-mingw32/include/c++/bits/stl_construct.h \
+  D:/CodeBlocks/mingw64/x86_64-w64-mingw32/include/c++/bits/stl_uninitialized.h \
+  D:/CodeBlocks/mingw64/x86_64-w64-mingw32/include/c++/bits/stl_vector.h \
+  D:/CodeBlocks/mingw64/x86_64-w64-mingw32/include/c++/bits/stl_bvector.h \
+  D:/CodeBlocks/mingw64/x86_64-w64-mingw32/include/c++/bits/vector.tcc \
   D:/sockets/common/inc/socket.hpp \
   D:/sockets/common/inc/sckcomm.hpp \
   D:/CodeBlocks/mingw64/x86_64-w64-mingw32/include/c++/thread \
@@ -2753,8 +2765,6 @@ CMakeFiles/server.dir/src/main.cpp.obj: D:/sockets/server/src/main.cpp \
   D:/CodeBlocks/mingw64/x86_64-w64-mingw32/include/c++/array \
   D:/CodeBlocks/mingw64/x86_64-w64-mingw32/include/c++/bits/uses_allocator.h \
   D:/CodeBlocks/mingw64/x86_64-w64-mingw32/include/c++/memory \
-  D:/CodeBlocks/mingw64/x86_64-w64-mingw32/include/c++/bits/stl_construct.h \
-  D:/CodeBlocks/mingw64/x86_64-w64-mingw32/include/c++/bits/stl_uninitialized.h \
   D:/CodeBlocks/mingw64/x86_64-w64-mingw32/include/c++/bits/stl_tempbuf.h \
   D:/CodeBlocks/mingw64/x86_64-w64-mingw32/include/c++/bits/stl_raw_storage_iter.h \
   D:/CodeBlocks/mingw64/x86_64-w64-mingw32/include/c++/ext/concurrence.h \
@@ -2766,10 +2776,6 @@ CMakeFiles/server.dir/src/main.cpp.obj: D:/sockets/server/src/main.cpp \
   D:/CodeBlocks/mingw64/x86_64-w64-mingw32/include/c++/bits/shared_ptr_atomic.h \
   D:/CodeBlocks/mingw64/x86_64-w64-mingw32/include/c++/bits/atomic_base.h \
   D:/CodeBlocks/mingw64/x86_64-w64-mingw32/include/c++/backward/auto_ptr.h \
-  D:/CodeBlocks/mingw64/x86_64-w64-mingw32/include/c++/vector \
-  D:/CodeBlocks/mingw64/x86_64-w64-mingw32/include/c++/bits/stl_vector.h \
-  D:/CodeBlocks/mingw64/x86_64-w64-mingw32/include/c++/bits/stl_bvector.h \
-  D:/CodeBlocks/mingw64/x86_64-w64-mingw32/include/c++/bits/vector.tcc \
   D:/CodeBlocks/mingw64/x86_64-w64-mingw32/include/c++/queue \
   D:/CodeBlocks/mingw64/x86_64-w64-mingw32/include/c++/deque \
   D:/CodeBlocks/mingw64/x86_64-w64-mingw32/include/c++/bits/stl_deque.h \
@@ -2837,12 +2843,11 @@ CMakeFiles/server.dir/src/main.cpp.obj: D:/sockets/server/src/main.cpp \
   D:/sockets/common/inc/safequeue.hpp \
   D:/sockets/server/inc/db.hpp \
   D:/sockets/common/inc/log.hpp \
-  D:/CodeBlocks/mingw64/x86_64-w64-mingw32/include/c++/sstream \
-  D:/CodeBlocks/mingw64/x86_64-w64-mingw32/include/c++/bits/sstream.tcc \
   D:/CodeBlocks/mingw64/x86_64-w64-mingw32/include/c++/fstream \
   D:/CodeBlocks/mingw64/x86_64-w64-mingw32/include/c++/x86_64-w64-mingw32/bits/basic_file.h \
   D:/CodeBlocks/mingw64/x86_64-w64-mingw32/include/c++/x86_64-w64-mingw32/bits/c++io.h \
-  D:/CodeBlocks/mingw64/x86_64-w64-mingw32/include/c++/bits/fstream.tcc
+  D:/CodeBlocks/mingw64/x86_64-w64-mingw32/include/c++/bits/fstream.tcc \
+  D:/sockets/common/inc/json.hpp
 
 
 D:/CodeBlocks/mingw64/x86_64-w64-mingw32/include/c++/bits/stl_iterator_base_funcs.h:
@@ -3150,6 +3155,8 @@ D:/CodeBlocks/mingw64/x86_64-w64-mingw32/include/winapifamily.h:
 D:/CodeBlocks/mingw64/x86_64-w64-mingw32/include/c++/x86_64-w64-mingw32/bits/gthr-default.h:
 
 D:/CodeBlocks/mingw64/x86_64-w64-mingw32/include/errno.h:
+
+D:/sockets/common/inc/time.hpp:
 
 D:/CodeBlocks/mingw64/x86_64-w64-mingw32/include/c++/bits/hashtable.h:
 
